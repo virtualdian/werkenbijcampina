@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Je wilt toch niet werken bij Campina?</title>
+<meta name="description" content="Sloopmelk, natuurclaims, klimaatplannen en misleiding: wat organisaties over FrieslandCampina zeggen, met bronnen en de reactie van het bedrijf. Een satirische kijk.">
+<meta property="og:title" content="Je wilt toch niet werken bij Campina?">
+<meta property="og:description" content="Wat organisaties over FrieslandCampina zeggen, met bronnen en de reactie van het bedrijf.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐄</text></svg>">
+<style>
+  :root {
+    --bg: #f4f6fb; --ink: #0f1a33; --muted: #536080; --card: #ffffff; --line: #d8deec;
+    --accent: #1d4ed8; --warn: #b45309; --shadow: 0 1px 2px rgba(15,26,51,.06), 0 12px 32px rgba(15,26,51,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1020; --ink: #eef1fb; --muted: #9aa6c6; --card: #141b30; --line: #263052;
+      --accent: #7aa2ff; --warn: #fbbf24; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.4); }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.6;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-underline-offset: 3px; text-decoration-color: var(--accent); }
+  .wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+
+  header.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: .95rem; }
+  header.top .brand { font-weight: 700; text-decoration: none; }
+  header.top nav { display: flex; gap: 20px; }
+  header.top nav a { text-decoration: none; color: var(--muted); }
+  header.top nav a:hover { color: var(--ink); }
+
+  .hero { padding: clamp(40px, 9vw, 110px) 0 clamp(32px, 6vw, 56px); }
+  .eyebrow { display: inline-block; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 18px; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.4rem, 8vw, 5.6rem); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 24px; max-width: 14ch; }
+  h1 s { color: var(--muted); text-decoration-thickness: .07em; text-decoration-color: var(--accent); }
+  .lead { font-size: clamp(1.1rem, 2.4vw, 1.45rem); color: var(--muted); max-width: 46ch; margin: 0 0 32px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  button.apply { font: inherit; font-weight: 600; cursor: pointer; background: var(--ink); color: var(--bg); border: 0; border-radius: 999px; padding: 14px 26px; transition: transform .15s ease; }
+  button.apply:hover { transform: translateY(-2px); }
+  a.ghost { color: var(--muted); font-weight: 500; }
+  #reply { min-height: 1.6em; margin: 14px 0 0; color: var(--accent); font-weight: 600; }
+
+  section { padding: 24px 0 64px; }
+  h2 { font-family: Georgia, serif; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); max-width: 60ch; margin: 0 0 32px; }
+
+  .claims { display: grid; gap: 20px; }
+  .claim { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: clamp(20px, 4vw, 32px); box-shadow: var(--shadow); }
+  .claim .n { font-family: Georgia, serif; color: var(--accent); font-size: 1rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .claim h3 { font-family: Georgia, serif; font-size: clamp(1.3rem, 3vw, 1.8rem); line-height: 1.2; margin: 6px 0 12px; }
+  .claim p { margin: 0 0 12px; }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }
+  .col { border-radius: 16px; padding: 16px 18px; border: 1px solid var(--line); font-size: .95rem; }
+  .col b { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 6px; }
+  .col.them b { color: var(--warn); }
+  .col.us b { color: var(--accent); }
+  .col p { margin: 0; color: var(--muted); }
+  .src { margin-top: 14px; font-size: .85rem; color: var(--muted); }
+
+  .vacancies { display: grid; gap: 12px; }
+  .job { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
+  .job h3 { margin: 0; font-size: 1.05rem; }
+  .job p { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+  .tag { font-size: .78rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .tag.hot { color: var(--accent); border-color: var(--accent); }
+
+  .fair { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 20px; padding: clamp(20px, 4vw, 32px); }
+  .fair h2 { font-size: 1.5rem; }
+  .fair p { color: var(--muted); margin: 0 0 10px; }
+
+  .sources { padding-left: 1.2em; color: var(--muted); max-width: 75ch; }
+  .sources li { margin-bottom: 8px; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 56px; color: var(--muted); font-size: .85rem; }
+  footer p { max-width: 80ch; margin: 0 0 10px; }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } button.apply:hover { transform: none; } }
+  @media (max-width: 560px) { header.top nav { display: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">Je wilt toch niet werken bij Campina?</a>
+    <nav>
+      <a href="#claims">De claims</a>
+      <a href="#vacatures">Vacatures</a>
+      <a href="#bronnen">Bronnen</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <span class="eyebrow">Vacatures · 0 openstaand · 9000 liter per koe per jaar</span>
+      <h1>Niet werken bij <s>Campina</s></h1>
+      <p class="lead">Wie wil er nou werken voor een zuivelgigant waar dierenwelzijnsorganisaties, natuurbeschermers en de reclamewaakhond om beurten mee in de clinch liggen? Hieronder staat wat zij zeggen, met bron, en wat het bedrijf zelf zegt.</p>
+      <div class="cta">
+        <button class="apply" id="apply" type="button">Solliciteer nu</button>
+        <a class="ghost" href="#claims">Eerst de claims bekijken</a>
+      </div>
+      <p id="reply" role="status" aria-live="polite"></p>
+    </div>
+
+    <section id="claims">
+      <h2 class="reveal">De claims</h2>
+      <p class="sub reveal">Elke claim komt van een genoemde organisatie, niet van deze site. Waar het bedrijf reageerde, staat die reactie ernaast.</p>
+
+      <div class="claims">
+
+        <article class="claim reveal">
+          <span class="n">Claim 1 · Dierenwelzijn</span>
+          <h3>"Sloopmelk": koeien doorgefokt om meer melk te geven dan goed voor ze is</h3>
+          <p>Dierenwelzijnsorganisatie Wakker Dier stelt in een radiocampagne dat populaire producten van FrieslandCampina, waaronder Campina halfvolle melk, gemaakt worden van melk van koeien die zijn doorgefokt tot meer melk dan goed voor ze is. De organisatie noemt dat "sloopmelk" en schat dat circa 90 procent van de zuivel in de supermarkt daaronder valt. De gemiddelde Nederlandse koe geeft volgens het bericht 9000 liter per jaar.</p>
+          <div class="cols">
+            <div class="col them"><b>Wakker Dier</b><p>"De meeste melkkoeien leiden een slopend leven voor goedkope zuivel. Dat moet stoppen." Ze willen minimaal één ster Beter Leven of biologisch.</p></div>
+            <div class="col us"><b>FrieslandCampina</b><p>De aangesloten bedrijven voldoen aan alle Nederlandse en Europese wettelijke eisen. Koeien geven meer melk omdat ze gezonder zijn, in ruimere stallen staan en door jarenlange fokprogramma's.</p></div>
+          </div>
+          <p class="src">Bronnen: <a href="https://nieuws.nl/algemeen/wakker-dier-lanceert-radiocampagne-tegen-sloopmelk" rel="noopener">ANP via Nieuws.nl</a>, <a href="https://www.bnnvara.nl/kassa/artikelen/wakker-dier-circa-90-procent-van-de-zuivel-in-supermarkt-is-sloopmelk" rel="noopener">BNNVARA Kassa</a>.</p>
+        </article>
+
+        <article class="claim reveal">
+          <span class="n">Claim 2 · Greenwashing?</span>
+          <h3>"Beter voor de natuur": de Reclame Code Commissie ziet het bewijs niet</h3>
+          <p>De Reclame Code Commissie (RCC) besloot dat het keurmerk "On the way to PlanetProof" de claim "beter voor de natuur" niet kan aantonen. Natuurorganisaties, waaronder Vogelbescherming Nederland, stellen dat het keurmerk in de praktijk aanstuurt op intensivering en daardoor weidevogels zoals de grutto schaadt. Ze richten hun oproep tot Stichting Milieukeur en de gebruikers van het keurmerk, met name FrieslandCampina.</p>
+          <div class="cols">
+            <div class="col them"><b>Natuurorganisaties</b><p>Het keurmerk beloont hoogproductief raaigras dat vaak gemaaid wordt, ongeschikt voor weidevogels, en beloont weidevogelbeheer niet.</p></div>
+            <div class="col us"><b>Eerlijk is eerlijk</b><p>De RCC wees ook een klacht over een Campina-tv-spotje met het keurmerk af. De uitspraak ging over de claim van het keurmerk, niet over alle uitingen van het bedrijf.</p></div>
+          </div>
+          <p class="src">Bronnen: <a href="https://boeddhistischdagblad.nl/nieuws/210069-onjuiste-natuurclaim-keurmerk-on-the-way-to-planetproof" rel="noopener">Boeddhistisch Dagblad</a>, <a href="https://melkvee.nl/artikel/239637-klacht-over-campina-spotje-afgewezen" rel="noopener">Melkvee.nl</a>.</p>
+        </article>
+
+        <article class="claim reveal">
+          <span class="n">Claim 3 · Klimaat</span>
+          <h3>Klimaatplan voldoet niet aan de 1,5 graad-afspraak</h3>
+          <p>Onderzoek van het NewClimate Institute in opdracht van Milieudefensie rekende FrieslandCampina mee onder de 28 grote vervuilende bedrijven die te veel broeikasgassen uitstoten en een klimaatplan hebben dat niet voldoet aan internationale klimaatafspraken. Om binnen 1,5 graad te blijven moet de uitstoot volgens de benchmark in 2030 met 48 procent omlaag.</p>
+          <div class="cols">
+            <div class="col them"><b>Milieudefensie</b><p>De bedrijven hebben geen begin van een plan om de CO2-uitstoot in 2030 te halveren en in 2050 naar nul te brengen.</p></div>
+            <div class="col us"><b>FrieslandCampina</b><p>Het bedrijf heeft eigen klimaatdoelen: 33 procent minder broeikasgassen op de melkveebedrijven van leden in 2030 ten opzichte van 2015. Over de uitkomst van dit onderzoek vond ik geen reactie.</p></div>
+          </div>
+          <p class="src">Bronnen: <a href="https://www.bnnvara.nl/vroegevogels/artikelen/klimaatplannen-van-grote-bedrijven-schieten-tekort" rel="noopener">BNNVARA Vroege Vogels</a>, <a href="https://melkvee.nl/artikel/465739-frieslandcampina-wil-in-2050-klimaatneutrale-zuivel-produceren" rel="noopener">Melkvee.nl</a>.</p>
+        </article>
+
+        <article class="claim reveal">
+          <span class="n">Claim 4 · Misleiding</span>
+          <h3>Vanillevla zonder vanille</h3>
+          <p>Het College van Beroep van de Reclame Code Commissie oordeelde dat FrieslandCampina met Optimel Vanillevla, die geen vanille bevatte, in strijd handelde met de Europese wetgeving tegen misleiding. Het bedrijf paste de verpakking aan. Dit gaat over etikettering, niet over duurzaamheid, maar wel over hoe zorgvuldig er met de consument wordt omgegaan.</p>
+          <div class="cols">
+            <div class="col us"><b>FrieslandCampina</b><p>Vanille is duur, in 80 procent van de vanillevla's zit volgens het bedrijf geen echte vanille. De tekst op de verpakking werd aangepast.</p></div>
+          </div>
+          <p class="src">Bron: <a href="https://radar.avrotros.nl/artikelen/32371" rel="noopener">Radar</a>.</p>
+        </article>
+
+        <article class="claim reveal">
+          <span class="n">Claim 5 · De sector</span>
+          <h3>Hoorns weg en kalfjes bij de koe vandaan: gangbaar, en toch</h3>
+          <p>Het onthoornen van jonge kalveren was tot voor kort een standaardingreep op vrijwel elk melkveebedrijf en is volgens de Rijksoverheid nog steeds toegestaan. In de gangbare melkveehouderij worden kalveren kort na de geboorte bij de koe weggehaald. Dit is geen Campina-specifieke misstand: het geldt voor de hele sector, ook voor de melkveehouders die aan FrieslandCampina leveren. Dierenwelzijnsorganisaties vragen om afbouw.</p>
+          <p class="src">Bronnen: <a href="https://edepot.wur.nl/701185" rel="noopener">Wageningen University &amp; Research</a>, <a href="https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/dierenwelzijn/dierenwelzijn-productiedieren" rel="noopener">Rijksoverheid</a>. Zie ook <a href="https://www.bnnvara.nl/artikelen/minder-dierenleed-als-een-kalfje-bij-de-koe-blijft" rel="noopener">BNNVARA</a>.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="vacatures">
+      <h2 class="reveal">Openstaande vacatures</h2>
+      <p class="sub reveal">Je zou het bijna overwegen. Bijna.</p>
+      <div class="vacancies reveal">
+        <div class="job"><div><h3>Weidevogelbeheerder</h3><p>Taak: de grutto laten weten dat het raaigras niet persoonlijk bedoeld is.</p></div><span class="tag hot">Krimpt</span></div>
+        <div class="job"><div><h3>Specialist Etiketten</h3><p>Taak: "vanille" op de verpakking, vanille in de vla is een pre.</p></div><span class="tag">Vacature vervuld</span></div>
+        <div class="job"><div><h3>Senior Melkproductie</h3><p>Taak: nog net iets meer liters per koe.</p></div><span class="tag hot">Groeit</span></div>
+      </div>
+    </section>
+
+    <section id="reactie">
+      <div class="fair reveal">
+        <h2>Recht op antwoord</h2>
+        <p>FrieslandCampina of een van de genoemde organisaties die een onjuistheid ziet of een reactie wil laten opnemen: laat het de eigenaar van de domeinnaam weten, dan wordt de pagina aangepast of aangevuld.</p>
+      </div>
+    </section>
+
+    <section id="bronnen">
+      <h2 class="reveal">Bronnen</h2>
+      <ul class="sources reveal">
+        <li>ANP via Nieuws.nl, <a href="https://nieuws.nl/algemeen/wakker-dier-lanceert-radiocampagne-tegen-sloopmelk" rel="noopener">"Wakker Dier lanceert radiocampagne tegen 'sloopmelk'"</a>.</li>
+        <li>BNNVARA Kassa, <a href="https://www.bnnvara.nl/kassa/artikelen/wakker-dier-circa-90-procent-van-de-zuivel-in-supermarkt-is-sloopmelk" rel="noopener">"Wakker Dier: Circa 90 procent van de zuivel in supermarkt is sloopmelk"</a>.</li>
+        <li>Boeddhistisch Dagblad, <a href="https://boeddhistischdagblad.nl/nieuws/210069-onjuiste-natuurclaim-keurmerk-on-the-way-to-planetproof" rel="noopener">"Onjuiste natuurclaim keurmerk 'on the way to PlanetProof'"</a>.</li>
+        <li>Melkvee.nl, <a href="https://melkvee.nl/artikel/239637-klacht-over-campina-spotje-afgewezen" rel="noopener">"Klacht over Campina-spotje afgewezen"</a>.</li>
+        <li>BNNVARA Vroege Vogels, <a href="https://www.bnnvara.nl/vroegevogels/artikelen/klimaatplannen-van-grote-bedrijven-schieten-tekort" rel="noopener">"Klimaatplannen van grote bedrijven schieten tekort"</a>.</li>
+        <li>Melkvee.nl, <a href="https://melkvee.nl/artikel/465739-frieslandcampina-wil-in-2050-klimaatneutrale-zuivel-produceren" rel="noopener">"FrieslandCampina wil in 2050 klimaatneutrale zuivel produceren"</a>.</li>
+        <li>Radar (AVROTROS), <a href="https://radar.avrotros.nl/artikelen/32371" rel="noopener">"Definitieve uitspraak: Vanillevla zonder vanille is misleidend"</a>.</li>
+        <li>Wageningen University &amp; Research, <a href="https://edepot.wur.nl/701185" rel="noopener">publicatie over onthoornen en kalverhouderij</a>.</li>
+        <li>Rijksoverheid, <a href="https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/dierenwelzijn/dierenwelzijn-productiedieren" rel="noopener">Dierenwelzijn productiedieren</a>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Deze website is een persoonlijke, satirische meningsuiting en niet gelieerd aan FrieslandCampina of Campina. Er zijn geen echte vacatures. Voor echte vacatures ga je naar de officiële carrièresite van het bedrijf.</p>
+    <p>De claims op deze pagina zijn uitspraken van de genoemde organisaties en media, met bron. Ze zijn hier niet door de eigenaar van deze site onderzocht of bewezen. Het bedrijf betwist een deel ervan; waar bekend staat die reactie erbij.</p>
+  </footer>
+</div>
+
+<script>
+  const replies = [
+    "Echt waar? Denk er nog eens over na.",
+    "Heb je de bronnen hierboven wel gelezen?",
+    "Sollicitatie niet verzonden. De grutto vroeg om uitstel.",
+    "9000 liter per koe per jaar, en jij wilt er ook bij?",
+    "Probeer eens een werkgever die geen reclamewaakhond nodig heeft."
+  ];
+  let i = 0;
+  const out = document.getElementById("reply");
+  document.getElementById("apply").addEventListener("click", () => { out.textContent = replies[i++ % replies.length]; });
+  const io = "IntersectionObserver" in window
+    ? new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 })
+    : null;
+  document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+</script>
+</body>
+</html>
