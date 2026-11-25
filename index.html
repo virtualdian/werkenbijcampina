@@ -59,6 +59,11 @@
   .col p { margin: 0; color: var(--muted); }
   .src { margin-top: 14px; font-size: .85rem; color: var(--muted); }
 
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 0 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); }
+  .stat b { display: block; font-family: Georgia, serif; font-size: 2.8rem; line-height: 1.05; color: var(--accent); }
+  .stat span { display: block; margin-top: 6px; }
+  .stat small { display: block; margin-top: 10px; color: var(--muted); font-size: .8rem; }
   .vacancies { display: grid; gap: 12px; }
   .job { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
   .job h3 { margin: 0; font-size: 1.05rem; }
@@ -87,6 +92,7 @@
   <header class="top">
     <a class="brand" href="#">Je wilt toch niet werken bij Campina?</a>
     <nav>
+      <a href="#cijfers">Cijfers</a>
       <a href="#claims">De claims</a>
       <a href="#vacatures">Vacatures</a>
       <a href="#bronnen">Bronnen</a>
@@ -104,6 +110,16 @@
       </div>
       <p id="reply" role="status" aria-live="polite"></p>
     </div>
+
+    <section id="cijfers">
+      <h2 class="reveal">In cijfers</h2>
+      <p class="sub reveal">Drie getallen uit officiële statistieken, voor de sector als geheel.</p>
+      <div class="stats reveal">
+        <div class="stat"><b>31%</b><span>van de Nederlandse melkkoeien kwam in 2024 niet buiten: ruim 460 duizend van 1,5 miljoen koeien.</span><small>CBS, voorlopige cijfers 2024. Dat zegt niets over daglicht in de stal, alleen over buiten komen.</small></div>
+        <div class="stat"><b>35%</b><span>van het Nederlandse landoppervlak is gras of voedergewas, vooral voor rundvee en schapen.</span><small>Eigen berekening uit CBS: 54% van het land is landbouwgrond, daarvan is 65% gras of groenvoeder. Niet alleen koeien, en zonder geïmporteerd voer.</small></div>
+        <div class="stat"><b>+38%</b><span>melk per koe: van 6,3 duizend kg in 1995 naar 8,7 duizend kg in 2021.</span><small>CBS. Mogelijk door intensivering, huisvesting, voedingstechnieken en fokkerij.</small></div>
+      </div>
+    </section>
 
     <section id="claims">
       <h2 class="reveal">De claims</h2>
@@ -134,7 +150,18 @@
         </article>
 
         <article class="claim reveal">
-          <span class="n">Claim 3 · Klimaat</span>
+          <span class="n">Claim 3 · Natuur</span>
+          <h3>Raaigras en liters: minder weidevogels, meer melk per koe</h3>
+          <p>Natuurorganisaties, waaronder Vogelbescherming Nederland, stellen dat hoogproductief raaigras dat meerdere keren per jaar wordt gemaaid ongeschikt is voor weidevogels, vlinders en bijen. De melkproductie per koe steeg volgens het CBS tussen 1995 en 2021 van 6,3 naar 8,7 duizend kg, onder meer door intensivering. Intussen daalt het aantal boerenlandvogels zoals de grutto volgens CBS en Sovon nog altijd. Een oorzakelijk verband tussen één bedrijf en die daling kan deze site niet aantonen: het gaat om de sector als geheel.</p>
+          <div class="cols">
+            <div class="col them"><b>Vogelbescherming e.a.</b><p>Weidevogelkuikens hebben insecten nodig in natte, bloemrijke graslanden. Eentonig, vaak gemaaid raaigras biedt dat niet.</p></div>
+            <div class="col us"><b>Stand van zaken</b><p>De afname van de grutto is de afgelopen jaren afgevlakt, maar van herstel is volgens onderzoek van Sovon en de Rijksuniversiteit Groningen nog geen sprake.</p></div>
+          </div>
+          <p class="src">Bronnen: <a href="https://boeddhistischdagblad.nl/nieuws/210069-onjuiste-natuurclaim-keurmerk-on-the-way-to-planetproof" rel="noopener">Boeddhistisch Dagblad</a>, <a href="https://www.binnenlandsbestuur.nl/ruimte-en-milieu/natuur-en-milieu/aantal-weidevogels-blijft-hard-dalen" rel="noopener">Binnenlands Bestuur (CBS en Sovon)</a>, <a href="https://nos.nl/l/2593188" rel="noopener">NOS</a>, <a href="https://www.cbs.nl/nl-nl/longread/statistische-trends/2022/de-verduurzaming-van-de-landbouw-deel-i-productie-en-verbruik?onepage=true" rel="noopener">CBS</a>.</p>
+        </article>
+
+        <article class="claim reveal">
+          <span class="n">Claim 4 · Klimaat</span>
           <h3>Klimaatplan voldoet niet aan de 1,5 graad-afspraak</h3>
           <p>Onderzoek van het NewClimate Institute in opdracht van Milieudefensie rekende FrieslandCampina mee onder de 28 grote vervuilende bedrijven die te veel broeikasgassen uitstoten en een klimaatplan hebben dat niet voldoet aan internationale klimaatafspraken. Om binnen 1,5 graad te blijven moet de uitstoot volgens de benchmark in 2030 met 48 procent omlaag.</p>
           <div class="cols">
@@ -145,7 +172,7 @@
         </article>
 
         <article class="claim reveal">
-          <span class="n">Claim 4 · De sector</span>
+          <span class="n">Claim 5 · De sector</span>
           <h3>Hoorns weg en kalfjes bij de koe vandaan: gangbaar, en toch</h3>
           <p>Het onthoornen van jonge kalveren was tot voor kort een standaardingreep op vrijwel elk melkveebedrijf en is volgens de Rijksoverheid nog steeds toegestaan. In de gangbare melkveehouderij worden kalveren kort na de geboorte bij de koe weggehaald. Dit is geen Campina-specifieke misstand: het geldt voor de hele sector, ook voor de melkveehouders die aan FrieslandCampina leveren. Dierenwelzijnsorganisaties vragen om afbouw.</p>
           <p class="src">Bronnen: <a href="https://edepot.wur.nl/701185" rel="noopener">Wageningen University &amp; Research</a>, <a href="https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/dierenwelzijn/dierenwelzijn-productiedieren" rel="noopener">Rijksoverheid</a>. Zie ook <a href="https://www.bnnvara.nl/artikelen/minder-dierenleed-als-een-kalfje-bij-de-koe-blijft" rel="noopener">BNNVARA</a>.</p>
@@ -179,6 +206,10 @@
         <li>Melkvee.nl, <a href="https://melkvee.nl/artikel/239637-klacht-over-campina-spotje-afgewezen" rel="noopener">"Klacht over Campina-spotje afgewezen"</a>.</li>
         <li>BNNVARA Vroege Vogels, <a href="https://www.bnnvara.nl/vroegevogels/artikelen/klimaatplannen-van-grote-bedrijven-schieten-tekort" rel="noopener">"Klimaatplannen van grote bedrijven schieten tekort"</a>.</li>
         <li>Melkvee.nl, <a href="https://melkvee.nl/artikel/465739-frieslandcampina-wil-in-2050-klimaatneutrale-zuivel-produceren" rel="noopener">"FrieslandCampina wil in 2050 klimaatneutrale zuivel produceren"</a>.</li>
+        <li>CBS, <a href="https://www.cbs.nl/nl-nl/nieuws/2025/33/aantal-koeien-dat-permanent-op-stal-staat-toegenomen" rel="noopener">"Aantal koeien dat permanent op stal staat toegenomen"</a> (2025).</li>
+        <li>CBS, <a href="https://www.cbs.nl/nl-nl/achtergrond/2025/14/feiten-en-cijfers-over-de-landbouw" rel="noopener">"Feiten en cijfers over de landbouw"</a> (grondgebruik 2024).</li>
+        <li>CBS, <a href="https://www.cbs.nl/nl-nl/longread/statistische-trends/2022/de-verduurzaming-van-de-landbouw-deel-i-productie-en-verbruik?onepage=true" rel="noopener">"De verduurzaming van de landbouw, deel I"</a> (melkproductie per koe).</li>
+        <li>Binnenlands Bestuur, <a href="https://www.binnenlandsbestuur.nl/ruimte-en-milieu/natuur-en-milieu/aantal-weidevogels-blijft-hard-dalen" rel="noopener">"Aantal weidevogels blijft hard dalen"</a>; NOS, <a href="https://nos.nl/l/2593188" rel="noopener">over de grutto</a>.</li>
         <li>Wageningen University &amp; Research, <a href="https://edepot.wur.nl/701185" rel="noopener">publicatie over onthoornen en kalverhouderij</a>.</li>
         <li>Rijksoverheid, <a href="https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/dierenwelzijn/dierenwelzijn-productiedieren" rel="noopener">Dierenwelzijn productiedieren</a>.</li>
       </ul>
